@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+  font-family: 'Poppins  ';
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  transform: rotate(45deg);
+  animation: float 4s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  left: -10px;
+}
+
+.heart::after {
+  top: -10px;
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-20px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0px);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.title {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  opacity: 0;
+  color: #db7093;
+}
+
+.message {
+  font-size: 2em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  opacity: 0;
+  line-height: 1.4;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Poppins ', cursive;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.yes-btn {
+  background: #db7093;
+  color: white;
+}
+
+.no-btn {
+  background: white;
+  color: #db7093;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.heart-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  will-change: transform;
+}
+
+.confetti.square {
+  border-radius: 0;
+}
+
+.confetti.circle {
+  border-radius: 50%;
+}
+
+.confetti.heart {
+  width: 15px;
+  height: 15px;
+  background: transparent !important;
+  transform: rotate(45deg);
+}
+
+.confetti.heart::before,
+.confetti.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.confetti.heart::before {
+  left: -7.5px;
+}
+
+.confetti.heart::after {
+  top: -7.5px;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.yes-btn:active {
+  animation: pop 0.3s ease;
+}
