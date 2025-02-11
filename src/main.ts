@@ -22,8 +22,10 @@ gsap.registerPlugin(TextPlugin);
       </p>
 
       <div class="buttons">
-        <button class="yes-btn" (click)="onYes()">¡Acepto! 🎆</button>
-        <button class="no-btn" (mouseenter)="moveNoButton($event)">No 🥀</button>
+      <button class="yes-btn" (click)="onYes()" (touchstart)="onYes()">¡Acepto! 🎆</button>
+
+      <button class="no-btn"(mouseenter)="moveNoButton($event)">No 🥀</button>
+
       </div>
 <p style="color: black;   font-weight: bold; font-size:14px ;" >Atte: <span>Daniel Bombela ©</span></p>
       <div class="celebration">
