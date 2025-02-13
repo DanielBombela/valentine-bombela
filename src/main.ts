@@ -18,7 +18,7 @@ gsap.registerPlugin(TextPlugin);
       
       <p class="message">
        Disculpa el atrevimiento, solo quería preguntarte algo…  <br>
-        ¿Te gustaría ir a cenar conmigo este San Valentín? 🌹
+        ¿Te gustaría ir a cenar conmigo mañana? 🌹
       </p>
 
       <div class="buttons">
