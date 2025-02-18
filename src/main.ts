@@ -17,15 +17,14 @@ gsap.registerPlugin(TextPlugin);
       <h1 class="title">Hola.. 😊</h1>
       
       <p class="message">
-       Disculpa el atrevimiento, solo quería preguntarte algo…  <br>
-        ¿Te gustaría ir a cenar conmigo mañana? 🌹
+       Por este medio, me tomo el atrevimiento de hacerle una invitación a Correr/Caminar al parque metropolitano el día 19 de febrero <br>
+        ¿Te gustaría ir? 
       </p>
 
       <div class="buttons">
-      <button class="yes-btn" (click)="onYes()" (touchstart)="onYes()">¡Acepto! 🎆</button>
+      <button class="yes-btn" (click)="onYes()" (touchstart)="onYes()">Acepto</button>
 
-      <button class="no-btn"(mouseenter)="moveNoButton($event)">No 🥀</button>
-
+    
       </div>
 <p style="color: black;   font-weight: bold; font-size:14px ;" >Atte: <span>Daniel Bombela ©</span></p>
       <div class="celebration">
@@ -153,7 +152,7 @@ export class App implements OnInit {
         opacity: 0,
         duration: 0.5,
         onComplete: () => {
-          messageElement.textContent = '¡No estaba preparado para esta repuesta, pero Te veo el 14 de febrero 🫣🎆';
+          messageElement.textContent = 'Bueno, no había boton de "no" jaja pero aún asi no es compromiso. Solo una condición... iremos por un caramel machiatto despues. 😉';
           gsap.to(messageElement, {
             opacity: 1,
             duration: 0.5
